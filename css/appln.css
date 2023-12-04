@@ -1,0 +1,322 @@
+body {
+        font-family: 'Poppins', sans-serif;
+	/*background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);*/
+	font-family: poppins;
+}
+
+.multi-step-form{
+	width: 700;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+
+.multi-step-formfieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 5px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset
+.multi-step-form fieldset:not(:first-of-type) {
+	display: none;
+}*/
+/*inputs*/
+.multi-step-form input, .multi-step-form textarea{
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 7px;
+	/*width: auto;
+	box-sizing: border-box;*/
+	font-family: poppins;
+	color: #2C3E50;
+	font-size: 15px;
+	display: inline-block;
+  	margin-right: 10px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.input-row label {
+  flex-basis: 30%;
+}
+
+.input-row input {
+  flex-basis: 60%;
+}
+
+/*buttons*/
+.multi-step-form .action-button {
+	width: 80px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px;
+	margin: 10px 5px;
+  	text-decoration: none;
+  	font-size: 14px;
+}
+.multi-step-form .action-button:hover, .multi-step-form .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+/* CSS for button */
+.action-button {
+	padding: 10px 20px;
+	font-size: 16px;
+	border: none;
+	border-radius: 4px;
+	background-color: #2196F3;
+	color: #fff;
+	cursor: pointer;
+}
+      
+.action-button:hover {
+	background-color: #0F8EE9;
+}
+      
+.action-button:active {
+	background-color: #0A6ABF;
+}
+
+.action-button:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.3);
+}
+
+/*headings*/
+.Title {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.Subtitle {
+	font-weight: normal;
+	font-size: 15px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	font-size: 15px;
+	width: 14.28%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 25px;
+	display: block;
+	font-size: 15px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 5px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+
+/*Dropdowns*/
+select[name="year"] {
+  background-color: transparent;
+  border: none;
+  padding: 1rem 2em 1rem 1rem;
+  }
+
+.Dropdown {
+	width: 200px;
+	height:50px;
+	padding: 10px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #fff;
+	color: #333;
+}
+      
+.Dropdown:hover {
+	border-color: #888;
+}
+      
+.Dropdown:focus {
+outline: none;
+box-shadow: 0 0 5px #888;
+}
+
+/*tables*/
+table{
+	align-items: center;
+	margin: auto;
+}
+/* CSS for table */
+table .fees{
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+	      
+th,td .fees {
+	  padding: 10px;
+	 text-align: left;
+	  border: 1px solid #ddd;
+}
+	    
+th .fees{
+	background-color: #f2f2f2de;
+}
+	      
+tr:hover .fees{
+	 background-color: #f5f5f5;
+}
+	      
+ul {
+	list-style-type: disc;
+	 padding-left: 20px;
+}
+	      
+ul li {
+	margin-bottom: 10px;
+}
+	
+/*fieldsets*/
+fieldset {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+fieldset.current {
+  opacity: 1;
+}
+
+/*checkbox*/
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/*textarea*/
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical; 
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #2196F3; 
+}
+
+/*card*/
+
+.card{
+	display: none;
+	animation: fade 250ms ease-in-out forwards;
+}
+.card.active{
+	display:block;
+}
+

@@ -1,0 +1,16 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #430783;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(246, 14, 227, 0.9));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(245, 62, 242, 0.9));
+}
+
+.navbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}

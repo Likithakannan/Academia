@@ -1,0 +1,248 @@
+/*Headings*/
+.Title {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+        text-align: center;
+        margin-top: 10px;
+}
+.step-title {
+	font-weight: normal;
+	font-size: 15px;
+	color: #666;
+	margin-bottom: 30px;
+        text-align: center;
+        
+}
+
+.card {
+        background-color: rgb(252, 252, 252);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: .5rem;
+        padding: .5rem;
+        /*max-width: 1000px;*/
+        margin: 0 auto;
+        animation: fade 250ms ease-in-out forwards;
+        width: 100%;
+        height: 1500px;
+        align-items: center;
+}
+      
+.form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .5rem;
+        gap: 2em;
+        font-size: 18px;
+        margin-right: 1rem;
+}
+      
+.form-group:last-child {
+        margin: 0;
+}
+      
+.form-group > input {
+        /* border: 1px solid #0a0a0a;
+        border-radius: 0em; */
+        /* font-size: 40px;
+        padding: 5em;
+        margin-top: 100px;
+        background-color: rgb(250, 249, 247);
+        margin-bottom: .5rem;
+        gap:2rem;
+        margin-left: 20px;*/
+        height: 10px;
+        border: 1px #000;
+        
+} 
+        
+      
+      .card.active {
+        animation: slide 250ms 125ms ease-in-out both;
+      }
+      
+      .multi-step-form {
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .hide {
+        display: none;
+      }
+      
+      @keyframes slide {
+        0% {
+          transform: translateX(200%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      
+      @keyframes fade {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(.75);
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0);
+        }
+      }
+      .checkbox-container {
+        display: inline-block;
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-size: 30px;
+      }
+      
+      .checkbox-container input {
+        position: absolute;
+        opacity: 1;
+        cursor: pointer;
+      }
+      
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: #0c0c0c;
+        border-radius: 3px;
+      }
+
+/*tables*/
+table{
+	align-items: center;
+	margin: auto;
+}
+/* CSS for table */
+table .fees{
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+table {
+  border-collapse: collapse;
+}
+	      
+th,td .fees {
+	  padding: 10px;
+	 text-align: left;
+	  border: 1px solid #ddd;
+}
+
+th, td {
+  border: 0.1px solid black;
+  width: 75%;
+  padding: 10px;
+}
+
+	    
+th .fees{
+	background-color: #f2f2f2de;
+}
+	      
+tr:hover .fees{
+	 background-color: #f5f5f5;
+}
+	      
+ul {
+	list-style-type: disc;
+	 padding-left: 20px;
+}
+	      
+ul li {
+	margin-bottom: 10px;
+}
+
+.btn{
+        background-color: #9bfa98;
+        border: 1px solid #000;
+        color: #000;
+        width: 80px;
+        height: 50px;
+        font-size: 15px;
+        padding: 10px;
+        display: inline-block;
+        border-radius: 8px;
+        margin: auto;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-right: 5px;
+}
+
+.Dropdown {
+	width: 200px;
+	height:50px;
+	padding: 10px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #fff;
+	color: #333;
+}
+
+.Dropdown:hover {
+	border-color: #888;
+}
+      
+.Dropdown:focus {
+outline: none;
+box-shadow: 0 0 5px #888;
+}
+
+.checkbox-container {
+  display: none; /* Hide the default checkbox */
+  
+}
+
+.checkbox-container + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.checkbox-container + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+}
+
+.checkbox-container:checked + label:before {
+  background-color: #00070c; /* Change the background color when checked */
+}
+
+.checkbox-container + label:after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  display: none; /* Hide the checkmark by default */
+}
+
+.checkbox-container:checked + label:after {
+  display: block; /* Show the checkmark when checked */
+}
+
+.valid{
+  border:#ddd;
+}
